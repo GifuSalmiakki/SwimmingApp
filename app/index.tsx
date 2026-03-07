@@ -3,7 +3,7 @@ import { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Button } from "react-native-paper";
 
-let counter = 0;
+
 export default function App() {
 
   const [counter, setCounter] = useState(0);
@@ -16,12 +16,18 @@ export default function App() {
       <Text style = {styles.text}>Mjäy oon tää kissa!</Text>
       <Link href="/userHistory" style={styles.button}> Activity </Link>
 
-      <Button buttonColor="#04527c" onPress={addToCounter}
-            mode="contained">Exercise done!</Button>
+      <Button buttonColor="#04527c" mode="contained"
+          onPress={addToCounter}
+          >Exercise done!
+        </Button>
 
-      <Button textColor="#054364" onPress={removeFromCounter} mode="outlined">Oops! Never mind (-1)</Button>
+      <Button textColor="#054364" mode="outlined"
+        disabled={counter === 0}
+        onPress={removeFromCounter} 
+        >Oops! Never mind (-1)
+      </Button>
 
-      <Text>Sessions completed: {+counter}</Text>
+      <Text>Sessions completed: {counter}</Text>
     </View>
   );
 }
