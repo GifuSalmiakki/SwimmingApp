@@ -11,6 +11,7 @@ export default function TabLayout() {
         <Ionicons name={focused ? 'barbell' : 'barbell-outline'} color={color} size={24}/>
         }} />
 
+    
       <Tabs.Screen name ="userHistory" options={{
         title: "Activity", 
         headerTitleAlign: "center",

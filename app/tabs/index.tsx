@@ -22,7 +22,7 @@ export default function App() {
       <Button textColor="#054364" mode="outlined"
         disabled={counter === 0}
         onPress={removeFromCounter} 
-        >Oops! Never mind (-1)
+        >Oops! Never mind
       </Button>
 
       <Text>Sessions completed: {counter}</Text>
