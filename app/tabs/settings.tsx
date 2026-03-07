@@ -30,13 +30,15 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#ffffff',
-    marginBottom: 10,
+    marginBottom: 50,
+    fontSize: 18,
   },
   input: {
     backgroundColor: '#ffffff',
     width: 200,
     padding: 10,
     borderRadius: 5,
-    marginBottom: 20,
+    marginBottom: 50,
+    fontSize: 18,
   },
 });
