@@ -1,4 +1,3 @@
-import { Link } from "expo-router";
 import { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Button } from "react-native-paper";
@@ -14,7 +13,6 @@ export default function App() {
 
     <View style={styles.container}>
       <Text style = {styles.text}>Mjäy oon tää kissa!</Text>
-      <Link href="/userHistory" style={styles.button}> Activity </Link>
 
       <Button buttonColor="#04527c" mode="contained"
           onPress={addToCounter}
