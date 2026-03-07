@@ -1,11 +1,12 @@
+import Button from "@mui/material/Button";
 import { Link } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style = {styles.text}>Mjäy oon tää kissa!</Text>
-
+      <Text style = {styles.text}>Mjäy oon toi kissa!</Text>
+      <Button variant="contained">Contained</Button>
       <Link href="/userHistory" style={styles.button}> Activity </Link>
     </View>
   );
