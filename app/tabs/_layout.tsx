@@ -18,6 +18,13 @@ export default function TabLayout() {
         tabBarIcon: ({color, focused}) => 
         <Ionicons name={focused ? 'bar-chart' : 'bar-chart-outline'} color={color} size={24}/>
         }} />
+
+        <Tabs.Screen name ="settings" options={{
+        title: "Settings", 
+        headerTitleAlign: "center",
+        tabBarIcon: ({color, focused}) => 
+        <Ionicons name={focused ? 'settings' : 'settings-outline'} color={color} size={24}/>
+        }} />
     </Tabs>
   );
 }
