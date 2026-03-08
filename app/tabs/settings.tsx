@@ -7,7 +7,7 @@ export default function SettingsScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Edit the membership price</Text>
+      <Text style={styles.text}>Set or edit the membership price</Text>
 
       <TextInput
         style={styles.input}

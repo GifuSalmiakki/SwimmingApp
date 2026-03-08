@@ -1,9 +1,12 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Tabs } from "expo-router";
+import { MembershipProvider } from "../dataTracker";
 
 export default function TabLayout() {
   return (
+    <MembershipProvider>
     <Tabs>
+
       <Tabs.Screen name ="index" options={{headerShown: false,
         title: "Home", 
         headerTitleAlign: "center",
@@ -30,5 +33,6 @@ export default function TabLayout() {
         <Ionicons name={focused ? 'settings' : 'settings-outline'} color={color} size={24}/>
         }} />
     </Tabs>
+    </MembershipProvider>
   );
 }
