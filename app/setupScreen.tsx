@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { StyleSheet, Text, TextInput, View } from "react-native";
 import { Button } from "react-native-paper";
+import { useMembership } from "./dataTracker";
 
-type Props = {
-  onStart: (price: number, period: string) => void;
-};
+export default function SetupScreen() {
+  const { setMembership } = useMembership();
 
-export default function SetupScreen({ onStart }: Props) {
   const [price, setPrice] = useState("");
   const [period, setPeriod] = useState("month");
 
@@ -23,22 +22,31 @@ export default function SetupScreen({ onStart }: Props) {
       />
 
       <View style={styles.buttons}>
-        <Button mode={period === "week" ? "contained" : "outlined"} onPress={() => setPeriod("week")}>
+        <Button
+          mode={period === "week" ? "contained" : "outlined"}
+          onPress={() => setPeriod("week")}
+        >
           Per week
         </Button>
 
-        <Button mode={period === "month" ? "contained" : "outlined"} onPress={() => setPeriod("month")}>
+        <Button
+          mode={period === "month" ? "contained" : "outlined"}
+          onPress={() => setPeriod("month")}
+        >
           Per month
         </Button>
 
-        <Button mode={period === "year" ? "contained" : "outlined"} onPress={() => setPeriod("year")}>
+        <Button
+          mode={period === "year" ? "contained" : "outlined"}
+          onPress={() => setPeriod("year")}
+        >
           Per year
         </Button>
       </View>
 
       <Button
         mode="contained"
-        onPress={() => onStart(Number(price), period)}
+        onPress={() => setMembership(Number(price), period)}
         style={styles.startButton}
       >
         Start Tracking

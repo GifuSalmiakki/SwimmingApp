@@ -13,11 +13,7 @@ export default function HomeScreen() {
   const [showConfetti, setShowConfetti] = useState(false);
 
   if (price === null) {
-    return (
-      <SetupScreen
-        onStart={(p, per) => setMembership(p, per)}
-      />
-    );
+    return <SetupScreen />;
   }
 
   function addExercise() {
