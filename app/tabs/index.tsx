@@ -1,25 +1,26 @@
 import { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { AnimatedButton } from "react-native-3d-animated-buttons";
+import ConfettiCannon from "react-native-confetti-cannon";
 import { Button } from "react-native-paper";
 
 export default function App() {
   const [counter, setCounter] = useState(0);
-  const addToCounter = () => setCounter(counter + 1);
-  const removeFromCounter = () => setCounter(counter - 1);
+  const [showConfetti, setShowConfetti] = useState(false);
 
-  // Confetti animation when exercise-button is pressed
-  /*const confettiRef = useRef<LottieView>(null);
-  function triggerConfetti() {
-    confettiRef.current?.play(0);
-  }*/
+  function addExercise() {
+    setCounter((prev) => prev + 1);
+    setShowConfetti(true);
+  }
+
+  const removeFromCounter = () => setCounter((prev) => prev - 1);
 
   return (
-  
     <View style={styles.container}>
+      
       <AnimatedButton
         title="Exercise done!"
-        onPress={addToCounter}
+        onPress={addExercise}
       />
 
       <Button
@@ -35,16 +36,19 @@ export default function App() {
       <Text style={styles.text}>
         Sessions completed: {counter}
       </Text>
+
+      {showConfetti && (
+        <ConfettiCannon
+          count={120}
+          origin={{ x: 200, y: -10 }}
+          fadeOut
+          explosionSpeed={300}
+          fallSpeed={2000}
+          onAnimationEnd={() => setShowConfetti(false)}
+        />
+      )}
+
     </View>
-    /*<LottieView
-        ref={confettiRef}
-        source={require('../../assets/confetti.json')}
-        autoPlay={false}
-        loop={false}
-        style={styles.lottie}
-        resizeMode='cover'
-      />*/
-  
   );
 }
 
@@ -62,20 +66,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginBottom: 30,
     fontWeight: "bold",
-
   },
 
   smallButton: {
     marginBottom: 30,
-  },
-
-  lottie: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    zIndex: 1000,
-    pointerEvents: "none",
   },
 });
