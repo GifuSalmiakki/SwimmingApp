@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function SettingsScreen() {
+
   const [price, setPrice] = useState("");
 
   return (
@@ -16,7 +17,7 @@ export default function SettingsScreen() {
         onChangeText={setPrice}
       />
 
-      <Text style={styles.text}>Price per month (€)</Text>
+      <Text style={styles.text}>Price per year (€)</Text>
     </View>
   );
 }
@@ -24,14 +25,15 @@ export default function SettingsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#71b6c2',
+    backgroundColor: '#a2e5f0',
     alignItems: 'center',
     justifyContent: 'center',
   },
   text: {
-    color: '#ffffff',
+    color: '#364458',
     marginBottom: 50,
     fontSize: 18,
+    fontWeight: "bold",
   },
   input: {
     backgroundColor: '#ffffff',

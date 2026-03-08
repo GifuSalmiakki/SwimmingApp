@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { AnimatedButton } from "react-native-3d-animated-buttons";
 import { Button } from "react-native-paper";
 
 export default function App() {
@@ -16,21 +17,14 @@ export default function App() {
   return (
   
     <View style={styles.container}>
-
-      <Button
-        mode="contained"
-        buttonColor="#04527c"
+      <AnimatedButton
+        title="Exercise done!"
         onPress={addToCounter}
-        style={styles.bigButton}
-        contentStyle={styles.bigButtonContent}
-        labelStyle={styles.bigButtonLabel}
-      >
-        Exercise done!
-      </Button>
+      />
 
       <Button
         mode="outlined"
-        textColor="#064273"
+        textColor="#05365e"
         disabled={counter === 0}
         onPress={removeFromCounter}
         style={styles.smallButton}
@@ -38,7 +32,7 @@ export default function App() {
         Oops! Never mind
       </Button>
 
-      <Text style={styles.counterText}>
+      <Text style={styles.text}>
         Sessions completed: {counter}
       </Text>
     </View>
@@ -57,38 +51,22 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#76b6c4",
+    backgroundColor: "#a2e5f0",
     alignItems: "center",
     justifyContent: "center",
     padding: 30,
   },
 
   text: {
-    color: "#ffffff",
+    color: "#364458",
     fontSize: 20,
     marginBottom: 30,
-  },
+    fontWeight: "bold",
 
-  bigButton: {
-    borderRadius: 100,
-    marginBottom: 50,
-  },
-
-  bigButtonContent: {
-    height: 200,
-    width: 200,
-  },
-
-  bigButtonLabel: {
-    fontSize: 20,
   },
 
   smallButton: {
     marginBottom: 30,
-  },
-
-  counterText: {
-    fontSize: 18,
   },
 
   lottie: {

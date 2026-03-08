@@ -11,11 +11,11 @@ export default function UserHistoryScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#71b6c2',
+    backgroundColor: '#a2e5f0',
     alignItems: 'center',
     justifyContent: 'center'
   },
   text: {
-    color: '#ffffff'
+    color: '#364458'
   }
 })
