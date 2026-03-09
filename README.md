@@ -18,3 +18,6 @@ npx expo start
 ```
 You'll get a QR-code and a exp://local-ip:port -URL, either of which can be used to see the running code in 
 Expo Go -app. 
+
+https://github.com/user-attachments/assets/7b24c7d6-08e9-4099-8c12-1a44850bc358
+
