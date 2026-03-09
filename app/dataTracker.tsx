@@ -18,9 +18,7 @@ export function MembershipProvider({ children }: { children: ReactNode }) {
   }
 
   return (
-    <MembershipContext.Provider
-      value={{ price, period, setMembership }}
-    >
+    <MembershipContext.Provider value={{ price, period, setMembership }}>
       {children}
     </MembershipContext.Provider>
   );
