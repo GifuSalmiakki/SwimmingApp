@@ -7,7 +7,6 @@ I feel motivated to get my money's worth.
 ### Tech stack
 
 Implemented with TypeScript + React Native -library. Current demo running with Expo + Expo Go on device.
-* *TODO: User data stored in Async Storage* *
 
 ### For running the demo:
 
