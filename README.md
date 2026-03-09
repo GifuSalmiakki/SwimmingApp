@@ -6,7 +6,8 @@ I feel motivated to get my money's worth.
 
 Implemented with TypeScript + React Native -library. Current demo running with Expo + Expo Go on device. 
 
-###For running the demo:
+### For running the demo:
+
 Install Expo Go from Google Play or App Store.
 ``` 
 git clone git@github.com:GifuSalmiakki/SwimmingApp.git
